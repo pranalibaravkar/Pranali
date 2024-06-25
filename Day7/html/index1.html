@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Section</title>
+    <link rel="stylesheet" href="/Day7/css/styles1.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="content">
+        <!-- Main content of the page -->
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <div class="site-logo">
+                    <img src="/Day7/Assets/web.png">
+                </div>
+                
+                <div class="professional-web-design">
+                    <h1>Professional Web Design</h1>
+                    <p>Hi! My name is Pranali Baravkar and I’m an expert in web design and branding. I can help you make your website more attractive.</p>
+                    <address>
+                        <p><i class="fa fa-map-marker"></i> Wisconsin Ave, Suite 700<br>Chevy Chase, Maryland 20815</p>
+                        <p><i class="fa fa-envelope"></i> <a href="mailto:support@figma.com">support@figma.com</a></p>
+                        <p><i class="fa fa-phone"></i> <a href="tel:+18008543680">+1 800 854-36-80</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-section question-us-section">
+                <h1>Question us</h1>
+                <form id="contact-form">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your name" required>
+                    
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Company Name" required>
+                    
+                    <label for="position">Position</label>
+                    <select id="position" name="position" required>
+                        <option value="ceo">CEO</option>
+                        <option value="manager">Manager</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                    </select>
+                    
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 800 123-34-45" pattern="^\+?[1-9]\d{1,14}$" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <button type="submit">Get started</button>
+                </form>
+            </div>
+            <div class="footer-section company-section">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Day7/js/script1.js"></script>
+</body>
+</html>
