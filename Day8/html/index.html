@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/Day8/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+        <img src="/Day8/assets/AA.png">
+        
+    </div>
+    
+        
+        <nav>
+            <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-cogs"></i> Assets</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Booking</a>
+            <a href="#"><i class="fas fa-car-side"></i> Sell Cars</a>
+            <a href="#"><i class="fas fa-car"></i> Buy Cars</a>
+            <a href="#"><i class="fas fa-wrench"></i> Services</a>
+            <a href="#"><i class="fas fa-calendar"></i> Calendar</a>
+            <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+        </nav>
+        <div class="settings">
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+        </div>
+        
+    </div>
+    <div class="main-content">
+        <header>
+            <input type="search" placeholder="Search or type">
+            <div class="profile">
+                <img src="/Day8/assets/Pranali.jpg" alt="Profile Picture">
+            </div>
+        </header>
+        <div class="cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Energy</h3>
+                    <div class="percentage" data-value="45">45%</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Range</h3>
+                    <div class="percentage" data-value="157">157%</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Brake fluid</h3>
+                    <div class="percentage" data-value="9">9%</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Tire Wear</h3>
+                    <div class="percentage" data-value="25">25%</div>
+                </div>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <h3>Miles Statistics</h3>
+                <canvas id="milesChart"></canvas>
+            </div>
+            <div class="chart">
+                <h3>Car Statistics</h3>
+                <canvas id="carChart"></canvas>
+            </div>
+        </div>
+        <div class="recommendations">
+            <div class="recommendation">
+                
+                <img src="/Day8/assets/Cooper.jpg" alt="Mini Cooper">
+                
+            </div>
+            <div class="recommendation">
+                
+                <img src="/Day8/assets/carrera.jpg" alt="Porsche 911 Carrera">
+               
+            </div>
+            <div class="recommendation">
+                
+                <img src="/Day8/assets/Red.jpg" alt="Porsche 911 Carrera">
+                
+            </div>
+        </div>
+    </div>
+    <script src="/Day8/js/script.js"></script>
+</body>
+</html>
