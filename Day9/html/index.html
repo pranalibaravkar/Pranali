@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="/Day9/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="logo">
+                <img src="/Day9/assets/Panu.jpg" alt="Logo">
+               
+                <h3>Welcome !</h3>
+                
+                <i class="fas fa-cog settings-icon"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-search"></i> Search</li>
+                    <li class="active"><i class="fas fa-table"></i> Data Table</li>
+                    <li><i class="fas fa-box"></i> Product</li>
+                    <li><i class="fas fa-chart-bar"></i> Analytics</li>
+                    <li><i class="fas fa-calendar-alt"></i> Calendar <span class="badge">15</span></li>
+                    <li><i class="fas fa-envelope"></i> Messenger</li>
+                    <li><i class="fas fa-coins"></i> Crypto</li>
+                </ul>
+            </nav>
+            <div class="bottom-icons">
+               
+                <i class="fas fa-sign-out-alt signout-icon">Sign Out</i>
+            </div>
+        </aside>
+        <main>
+            <header>
+                <h1>Data Table</h1>
+                <div class="search-add">
+                    <input type="text" id="search" placeholder="Search Employee" onkeyup="searchEmployee()">
+                    <button onclick="openForm()">Add Employee</button>
+                </div>
+            </header>
+            <div class="budget">
+                <div>Total Budget<br>$85,125.00</div>
+                <div>Monthly Budget<br>$85,125.00</div>
+                <div>Weekly Budget<br>$85,125.00</div>
+                <div>Today's Budget<br>$85,125.00</div>
+            </div>
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>Profile</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Role</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/Day9/assets/Panu.jpg" alt="Profile Picture"></td>
+                        <td>Pranali Baravkar</td>
+                        <td>pranalibaravakar@gmail.com</td>
+                        <td class="status free">Free</td>
+                        <td>Developer</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/A.jpg" alt="Profile Picture"></td>
+                        <td>Shweta Bobade</td>
+                        <td>bobadeshweta16@gmail.com</td>
+                        <td class="status busy">Busy</td>
+                        <td>Data Analyst</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/B.jpg" alt="Profile Picture"></td>
+                        <td>Tanishka Jagtap</td>
+                        <td>jagtaptanishka9@gmail.com</td>
+                        <td class="status working">Working</td>
+                        <td>Web Developer</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/C.jpeg" alt="Profile Picture"></td>
+                        <td>Rutuja Deshmukh</td>
+                        <td>rutujadeshmukh22@gmail.com</td>
+                        <td class="status busy">Busy</td>
+                        <td>Developer</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/E.jpeg" alt="Profile Picture"></td>
+                        <td>Prachi Kadam</td>
+                        <td>kadamprachi@gmail.com</td>
+                        <td class="status working">Working</td>
+                        <td>Designer</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/D.jpeg" alt="Profile Picture"></td>
+                        <td>Pratiksha Bhapkar</td>
+                        <td>bhapkarpratiksha@gmail.com</td>
+                        <td class="status free">Free</td>
+                        <td>Data Analyst</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/Day9/assets/F.jpg" alt="Profile Picture"></td>
+                        <td>Bhagyashree Shinde</td>
+                        <td>shindebhagyshree11@gmail.com</td>
+                        <td class="status busy">Busy</td>
+                        <td>Designer</td>
+                        <td><i class="fas fa-edit" onclick="editEmployee(this)"></i></td>
+                        <td><i class="fas fa-trash" onclick="deleteEmployee(this)"></i></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <div id="employeeForm" class="form-popup">
+        <form class="form-container" onsubmit="validateForm(event)">
+            <h2>Add Employee</h2>
+            <label for="name"><b>Name</b></label>
+            <input type="text" id="name" placeholder="Enter Name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+
+            <label for="status"><b>Status</b></label>
+            <select id="status" required>
+                <option value="Free">Free</option>
+                <option value="Busy">Busy</option>
+                <option value="Working">Working</option>
+                <option value="On Vacation">On Vacation</option>
+            </select>
+
+            <label for="role"><b>Role</b></label>
+            <input type="text" id="role" placeholder="Enter Role" required>
+
+            <button type="submit" class="btn">Add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script src="/Day9/js/script.js"></script>
+</body>
+</html>
